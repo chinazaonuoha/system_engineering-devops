@@ -1,0 +1,1 @@
+# This is script is to output n number of items (e.g print Best School ten times)
