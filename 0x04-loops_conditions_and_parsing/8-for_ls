@@ -2,7 +2,7 @@
 #The objective of this task is to ensure you can use a for loop to process items (like filenames) and apply string manipulation to achieve a specific output format.
 
 
-for file in $( find . -name "*" | cut -c 5- )
+for file in $( find . -type f | sed 's|.*/||' | cut -c 3- )
 do
     echo "$file";
 done
