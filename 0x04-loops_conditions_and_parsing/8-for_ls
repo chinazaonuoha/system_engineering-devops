@@ -2,7 +2,7 @@
 #The objective of this task is to ensure you can use a for loop to process items (like filenames) and apply string manipulation to achieve a specific output format.
 
 
-for file in $( find .  -path "*/.*" -prune -o -print | sed "s|^\./||" | cut -d "-" -f2- )
+for file in $( find .  -path "*/.*" -prune -o -print | sed -e "s|^\./||" -e "/^$/d" -e "/^\.$/d" | cut -d "-" -f2- )
 do
     echo "$file";
 done
