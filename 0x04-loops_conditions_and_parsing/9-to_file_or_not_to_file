@@ -2,15 +2,8 @@
 #script that provides information about a file named school. Your script should per#form the following checks and print the corresponding messages:
 
 if [ -e school ]; then
-     if [ -f school ]; then
-        echo "school is a regular file"
-    fi
-fi
-if [ -f school ]; then
-  echo "school is a regular file"
-    if [ ! -s school ]; then
-        echo "school exists but is empty"
-    else
-    echo "school is not empty"
-fi
+    echo "school file exists"
+   
+else
+   echo "school file does not exist"
 fi
