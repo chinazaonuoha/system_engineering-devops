@@ -1,0 +1,23 @@
+ #!/usr/bin/env bash
+ #script that provides information about a file named school. Your script should perform the following checks and print the corresponding messages:
+
+# Check if 'school' exists (any type)
+if [ -e school ]; then
+  # Check if it's a regular file
+    if [ -f school ]; then
+        echo "school is a regular file"
+	  fi
+	    # If it exists but is NOT a regular file (e.g., a directory or symlink), do nothing
+	    fi
+
+# Check if 'school' is a regular file
+if [ -f school ]; then
+  echo "school is a regular file"
+
+  # Check if 'school' is empty
+    if [ ! -s school ]; then
+        echo "school exists but is empty"
+	  else
+	      echo "school is not empty"
+	        fi
+		fi
