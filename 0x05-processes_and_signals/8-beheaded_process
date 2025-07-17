@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 # to ensure you understand and can use the SIGKILL signal to forcibly terminate a process, even one designed to be “invincible” to SIGTERM.
-pgrep 7-highlander | xargs -r kill -9
+pgrep -f 7-highlander | xargs -r kill -9
